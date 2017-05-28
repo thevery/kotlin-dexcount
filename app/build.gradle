@@ -31,4 +31,6 @@ dependencies {
 
 dexcount {
     format = 'list'
+    includeClasses = true
+    includeFieldCount = false
 }
