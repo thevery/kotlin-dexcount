@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 //apply plugin: 'kotlin-android'
-//apply plugin: 'retrolambda'
+apply plugin: 'me.tatarka.retrolambda'
 
 apply plugin: 'com.getkeepsafe.dexcount'
 
@@ -20,6 +20,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt') // '-dontobfuscate' doesn't work: https://issuetracker.google.com/issues/37123653
 //            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 

@@ -10,5 +10,7 @@ public class MainActivityJava extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        new Thread(() -> System.out.println("Runnable1.run()")).start();
+        new Thread(() -> System.out.println("Runnable2.run()")).start();
     }
 }
